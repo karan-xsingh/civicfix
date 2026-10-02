@@ -1,0 +1,46 @@
+@import 'leaflet/dist/leaflet.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-concrete text-ink font-sans transition-colors duration-200;
+}
+
+.dark body {
+  @apply bg-asphalt text-concrete;
+}
+
+.btn {
+  @apply rounded-md px-4 py-2 text-sm font-semibold cursor-pointer transition;
+}
+.btn-yellow { @apply bg-signal-yellow text-asphalt hover:brightness-95; }
+.btn-outline { @apply border-[1.5px] border-asphalt dark:border-line text-asphalt dark:text-concrete bg-transparent hover:bg-black/5 dark:hover:bg-white/5; }
+.btn-dark { @apply bg-asphalt text-concrete hover:bg-asphalt-2; }
+.btn-ai { @apply text-white rounded-md px-4 py-2 text-sm font-semibold; background: linear-gradient(135deg, #3E6680, #2C4A5E); }
+
+.field-input {
+  @apply w-full rounded-md border-[1.5px] border-line bg-panel dark:bg-asphalt-2 dark:border-asphalt-2 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-signal-blue;
+}
+
+.card {
+  @apply bg-panel dark:bg-asphalt-2 border-[1.5px] border-line dark:border-asphalt-2 rounded-lg p-4;
+}
+
+.badge {
+  @apply font-mono text-[11px] font-semibold px-2.5 py-1 rounded border-[1.5px] whitespace-nowrap;
+}
+.badge-Reported { @apply text-signal-orange border-signal-orange bg-orange-50 dark:bg-transparent; }
+.badge-Acknowledged, .badge-InProgress { @apply text-signal-blue border-signal-blue bg-blue-50 dark:bg-transparent; }
+.badge-Resolved { @apply text-signal-green border-signal-green bg-green-50 dark:bg-transparent; }
+
+.badge-sev {
+  @apply font-mono text-[10.5px] font-semibold px-2 py-0.5 rounded border-[1.5px] ml-1.5;
+}
+.badge-sev-Low { @apply text-signal-green border-signal-green; }
+.badge-sev-Medium { @apply text-amber-700 border-signal-yellow bg-amber-50 dark:bg-transparent; }
+.badge-sev-High { @apply text-signal-orange border-signal-orange; }
+
+.overdue-flag {
+  @apply font-mono text-[10.5px] font-semibold text-white bg-signal-orange px-2 py-0.5 rounded ml-1.5;
+}
